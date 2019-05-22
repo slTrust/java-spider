@@ -3,11 +3,11 @@ package com.littlejava.model;
 import java.util.HashMap;
 import java.util.Map;
 
-public class NewsWithRelated extends News{
+public class NewsWithRelated extends UrlNews{
 
     private HashMap<String,String> related;
-    public NewsWithRelated(String title, String content) {
-        super(title, content);
+    public NewsWithRelated(String url,String title, String content) {
+        super(url,title, content);
         related = new HashMap<>();
     }
 

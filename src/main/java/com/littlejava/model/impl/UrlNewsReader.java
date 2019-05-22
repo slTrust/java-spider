@@ -23,7 +23,7 @@ public class UrlNewsReader {
         String content = contentElements.first().text();
 
 
-        NewsWithRelated news = new NewsWithRelated(title,content);
+        NewsWithRelated news = new NewsWithRelated(url,title,content);
 
 
         Elements relatedElements = doc.select(".row___3h219");

@@ -3,6 +3,7 @@ package com.littlejava;
 import com.littlejava.model.NewsWithRelated;
 import com.littlejava.model.Viewable;
 import com.littlejava.model.impl.UrlNewsReader;
+import com.littlejava.view.ListView;
 
 import java.io.IOException;
 import java.util.*;
@@ -38,6 +39,7 @@ public class Main2 {
      */
     public static void read2() throws IOException {
 
+        long startTime = System.currentTimeMillis();
 
         Queue<NewsWithRelated> newsQueue = new LinkedList<>();
 
@@ -81,7 +83,9 @@ public class Main2 {
             }
         }
 
+        long endTime=System.currentTimeMillis();
 
+        System.out.println("程序运行时间： " + (endTime - startTime) + "ms");
         /**
          * 扩展：
          * 1。 实现去重复
